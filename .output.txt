@@ -1,563 +1,292 @@
-time="2026-09-15T20:04:36+07:00" level=warning msg="C:\\Users\\a\\.gemini\\antigravity\\scratch\\quickbite-monitoring-demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013117745Z level=info msg="Starting Grafana" version=10.0.3 commit=eb8dd72637 branch=HEAD compiled=2023-07-25T17:55:59Z
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013537559Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013598741Z level=info msg="Config loaded from" file=/usr/share/grafana/conf/defaults.ini
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013609703Z level=info msg="Config loaded from" file=/etc/grafana/grafana.ini
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013614372Z level=info msg="Config overridden from command line" arg="default.paths.data=/var/lib/grafana"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.01361827Z level=info msg="Config overridden from command line" arg="default.paths.logs=/var/log/grafana"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013621607Z level=info msg="Config overridden from command line" arg="default.paths.plugins=/var/lib/grafana/plugins"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013625214Z level=info msg="Config overridden from command line" arg="default.paths.provisioning=/etc/grafana/provisioning"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013630765Z level=info msg="Config overridden from command line" arg="default.log.mode=console"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013635143Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_DATA=/var/lib/grafana"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013639212Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_LOGS=/var/log/grafana"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013643189Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PLUGINS=/var/lib/grafana/plugins"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013646736Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013650123Z level=info msg="Config overridden from Environment variable" var="GF_SECURITY_ADMIN_USER=admin"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.01365374Z level=info msg="Config overridden from Environment variable" var="GF_SECURITY_ADMIN_PASSWORD=*********"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013656917Z level=info msg="Config overridden from Environment variable" var="GF_USERS_ALLOW_SIGN_UP=false"
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013660334Z level=info msg=Target target=[all]
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013671175Z level=info msg="Path Home" path=/usr/share/grafana
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013675233Z level=info msg="Path Data" path=/var/lib/grafana
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013678379Z level=info msg="Path Logs" path=/var/log/grafana
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013681626Z level=info msg="Path Plugins" path=/var/lib/grafana/plugins
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013685163Z level=info msg="Path Provisioning" path=/etc/grafana/provisioning
-quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013689011Z level=info msg="App mode production"
-quickbite-grafana  | logger=sqlstore t=2026-09-15T12:50:54.014099727Z level=info msg="Connecting to DB" dbtype=sqlite3
-quickbite-grafana  | logger=sqlstore t=2026-09-15T12:50:54.014166439Z level=info msg="Creating SQLite database file" path=/var/lib/grafana/grafana.db
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.016325165Z level=info msg="Starting DB migrations"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.016596554Z level=info msg="Executing migration" id="create migration_log table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.027428665Z level=info msg="Executing migration" id="create user table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.037803309Z level=info msg="Executing migration" id="add unique index user.login"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.048803969Z level=info msg="Executing migration" id="add unique index user.email"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.059020191Z level=info msg="Executing migration" id="drop index UQE_user_login - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.07018024Z level=info msg="Executing migration" id="drop index UQE_user_email - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.081025087Z level=info msg="Executing migration" id="Rename table user to user_v1 - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.097772014Z level=info msg="Executing migration" id="create user table v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.113873534Z level=info msg="Executing migration" id="create index UQE_user_login - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.126470372Z level=info msg="Executing migration" id="create index UQE_user_email - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.138004386Z level=info msg="Executing migration" id="copy data_source v1 to v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.14694154Z level=info msg="Executing migration" id="Drop old table user_v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.157862098Z level=info msg="Executing migration" id="Add column help_flags1 to user table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.168187587Z level=info msg="Executing migration" id="Update user table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.178471194Z level=info msg="Executing migration" id="Add last_seen_at column to user"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.188243026Z level=info msg="Executing migration" id="Add missing user data"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.202209735Z level=info msg="Executing migration" id="Add is_disabled column to user"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.213007456Z level=info msg="Executing migration" id="Add index user.login/user.email"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.223013444Z level=info msg="Executing migration" id="Add is_service_account column to user"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.235975166Z level=info msg="Executing migration" id="Update is_service_account column to nullable"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.249838041Z level=info msg="Executing migration" id="create temp user table v1-7"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.260519164Z level=info msg="Executing migration" id="create index IDX_temp_user_email - v1-7"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.271165142Z level=info msg="Executing migration" id="create index IDX_temp_user_org_id - v1-7"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.281478839Z level=info msg="Executing migration" id="create index IDX_temp_user_code - v1-7"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.297965034Z level=info msg="Executing migration" id="create index IDX_temp_user_status - v1-7"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.316198711Z level=info msg="Executing migration" id="Update temp_user table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.328554432Z level=info msg="Executing migration" id="drop index IDX_temp_user_email - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.338641827Z level=info msg="Executing migration" id="drop index IDX_temp_user_org_id - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.347153455Z level=info msg="Executing migration" id="drop index IDX_temp_user_code - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.357386664Z level=info msg="Executing migration" id="drop index IDX_temp_user_status - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.370574671Z level=info msg="Executing migration" id="Rename table temp_user to temp_user_tmp_qwerty - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.382241329Z level=info msg="Executing migration" id="create temp_user v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.395268045Z level=info msg="Executing migration" id="create index IDX_temp_user_email - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.406071178Z level=info msg="Executing migration" id="create index IDX_temp_user_org_id - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.417502819Z level=info msg="Executing migration" id="create index IDX_temp_user_code - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.42958916Z level=info msg="Executing migration" id="create index IDX_temp_user_status - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.441916796Z level=info msg="Executing migration" id="copy temp_user v1 to v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.452451877Z level=info msg="Executing migration" id="drop temp_user_tmp_qwerty"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.463272155Z level=info msg="Executing migration" id="Set created for temp users that will otherwise prematurely expire"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.472089491Z level=info msg="Executing migration" id="create star table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.481426645Z level=info msg="Executing migration" id="add unique index star.user_id_dashboard_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.4993532Z level=info msg="Executing migration" id="create org table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.513136589Z level=info msg="Executing migration" id="create index UQE_org_name - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.52339626Z level=info msg="Executing migration" id="create org_user table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.534782051Z level=info msg="Executing migration" id="create index IDX_org_user_org_id - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.547348482Z level=info msg="Executing migration" id="create index UQE_org_user_org_id_user_id - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.560075101Z level=info msg="Executing migration" id="create index IDX_org_user_user_id - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.57090931Z level=info msg="Executing migration" id="Update org table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.580328356Z level=info msg="Executing migration" id="Update org_user table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.590214611Z level=info msg="Executing migration" id="Migrate all Read Only Viewers to Viewers"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.601888101Z level=info msg="Executing migration" id="create dashboard table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.613332618Z level=info msg="Executing migration" id="add index dashboard.account_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.625298917Z level=info msg="Executing migration" id="add unique index dashboard_account_id_slug"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.637253041Z level=info msg="Executing migration" id="create dashboard_tag table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.653720567Z level=info msg="Executing migration" id="add unique index dashboard_tag.dasboard_id_term"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.673668892Z level=info msg="Executing migration" id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.689615644Z level=info msg="Executing migration" id="Rename table dashboard to dashboard_v1 - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.709285326Z level=info msg="Executing migration" id="create dashboard v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.72566802Z level=info msg="Executing migration" id="create index IDX_dashboard_org_id - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.745147509Z level=info msg="Executing migration" id="create index UQE_dashboard_org_id_slug - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.763698043Z level=info msg="Executing migration" id="copy dashboard v1 to v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.785444114Z level=info msg="Executing migration" id="drop table dashboard_v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.809918198Z level=info msg="Executing migration" id="alter dashboard.data to mediumtext v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.825684945Z level=info msg="Executing migration" id="Add column updated_by in dashboard - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.837593894Z level=info msg="Executing migration" id="Add column created_by in dashboard - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.848841723Z level=info msg="Executing migration" id="Add column gnetId in dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.867072301Z level=info msg="Executing migration" id="Add index for gnetId in dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.876958767Z level=info msg="Executing migration" id="Add column plugin_id in dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.886697067Z level=info msg="Executing migration" id="Add index for plugin_id in dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.898948421Z level=info msg="Executing migration" id="Add index for dashboard_id in dashboard_tag"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.908169756Z level=info msg="Executing migration" id="Update dashboard table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.918190207Z level=info msg="Executing migration" id="Update dashboard_tag table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.926259178Z level=info msg="Executing migration" id="Add column folder_id in dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.936383234Z level=info msg="Executing migration" id="Add column isFolder in dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.946176195Z level=info msg="Executing migration" id="Add column has_acl in dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.95362855Z level=info msg="Executing migration" id="Add column uid in dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.961033504Z level=info msg="Executing migration" id="Update uid column values in dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.968208022Z level=info msg="Executing migration" id="Add unique index dashboard_org_id_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.976472104Z level=info msg="Executing migration" id="Remove unique index org_id_slug"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.98428143Z level=info msg="Executing migration" id="Update dashboard title length"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.993184169Z level=info msg="Executing migration" id="Add unique index for dashboard_org_id_title_folder_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.002767269Z level=info msg="Executing migration" id="create dashboard_provisioning"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.012573854Z level=info msg="Executing migration" id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.022521819Z level=info msg="Executing migration" id="create dashboard_provisioning v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.033049571Z level=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.040729694Z level=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.053761612Z level=info msg="Executing migration" id="copy dashboard_provisioning v1 to v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.065925211Z level=info msg="Executing migration" id="drop dashboard_provisioning_tmp_qwerty"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.075804473Z level=info msg="Executing migration" id="Add check_sum column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.087059862Z level=info msg="Executing migration" id="Add index for dashboard_title"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.111217929Z level=info msg="Executing migration" id="delete tags for deleted dashboards"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.125758578Z level=info msg="Executing migration" id="delete stars for deleted dashboards"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.136884826Z level=info msg="Executing migration" id="Add index for dashboard_is_folder"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.148744829Z level=info msg="Executing migration" id="Add isPublic for dashboard"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.160056262Z level=info msg="Executing migration" id="create data_source table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.16949887Z level=info msg="Executing migration" id="add index data_source.account_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.179665868Z level=info msg="Executing migration" id="add unique index data_source.account_id_name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.189473384Z level=info msg="Executing migration" id="drop index IDX_data_source_account_id - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.199052043Z level=info msg="Executing migration" id="drop index UQE_data_source_account_id_name - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.206826832Z level=info msg="Executing migration" id="Rename table data_source to data_source_v1 - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.21763995Z level=info msg="Executing migration" id="create data_source table v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.224781942Z level=info msg="Executing migration" id="create index IDX_data_source_org_id - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.233897479Z level=info msg="Executing migration" id="create index UQE_data_source_org_id_name - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.24277788Z level=info msg="Executing migration" id="Drop old table data_source_v1 #2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.252371978Z level=info msg="Executing migration" id="Add column with_credentials"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.260509384Z level=info msg="Executing migration" id="Add secure json data column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.267531385Z level=info msg="Executing migration" id="Update data_source table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.274976503Z level=info msg="Executing migration" id="Update initial version to 1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.283865684Z level=info msg="Executing migration" id="Add read_only data column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.292332738Z level=info msg="Executing migration" id="Migrate logging ds to loki ds"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.300466479Z level=info msg="Executing migration" id="Update json_data with nulls"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.307592525Z level=info msg="Executing migration" id="Add uid column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.31637962Z level=info msg="Executing migration" id="Update uid value"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.323686286Z level=info msg="Executing migration" id="Add unique index datasource_org_id_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.333008901Z level=info msg="Executing migration" id="add unique index datasource_org_id_is_default"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.341958148Z level=info msg="Executing migration" id="create api_key table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.351136508Z level=info msg="Executing migration" id="add index api_key.account_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.360270616Z level=info msg="Executing migration" id="add index api_key.key"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.368554507Z level=info msg="Executing migration" id="add index api_key.account_id_name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.377299773Z level=info msg="Executing migration" id="drop index IDX_api_key_account_id - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.385243668Z level=info msg="Executing migration" id="drop index UQE_api_key_key - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.392206724Z level=info msg="Executing migration" id="drop index UQE_api_key_account_id_name - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.400201768Z level=info msg="Executing migration" id="Rename table api_key to api_key_v1 - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.408974023Z level=info msg="Executing migration" id="create api_key table v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.417108802Z level=info msg="Executing migration" id="create index IDX_api_key_org_id - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.424364518Z level=info msg="Executing migration" id="create index UQE_api_key_key - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.433387199Z level=info msg="Executing migration" id="create index UQE_api_key_org_id_name - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.440639502Z level=info msg="Executing migration" id="copy api_key v1 to v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.44722291Z level=info msg="Executing migration" id="Drop old table api_key_v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.454022391Z level=info msg="Executing migration" id="Update api_key table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.460547625Z level=info msg="Executing migration" id="Add expires to api_key table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.469433381Z level=info msg="Executing migration" id="Add service account foreign key"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.476505135Z level=info msg="Executing migration" id="set service account foreign key to nil if 0"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.488449014Z level=info msg="Executing migration" id="Add last_used_at to api_key table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.498166799Z level=info msg="Executing migration" id="Add is_revoked column to api_key table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.505992389Z level=info msg="Executing migration" id="create dashboard_snapshot table v4"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.514538899Z level=info msg="Executing migration" id="drop table dashboard_snapshot_v4 #1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.52212652Z level=info msg="Executing migration" id="create dashboard_snapshot table v5 #2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.53193778Z level=info msg="Executing migration" id="create index UQE_dashboard_snapshot_key - v5"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.540616655Z level=info msg="Executing migration" id="create index UQE_dashboard_snapshot_delete_key - v5"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.549749121Z level=info msg="Executing migration" id="create index IDX_dashboard_snapshot_user_id - v5"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.557555257Z level=info msg="Executing migration" id="alter dashboard_snapshot to mediumtext v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.565624294Z level=info msg="Executing migration" id="Update dashboard_snapshot table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.574341242Z level=info msg="Executing migration" id="Add column external_delete_url to dashboard_snapshots table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.584730465Z level=info msg="Executing migration" id="Add encrypted dashboard json column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.596369431Z level=info msg="Executing migration" id="Change dashboard_encrypted column to MEDIUMBLOB"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.613136036Z level=info msg="Executing migration" id="create quota table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.621867821Z level=info msg="Executing migration" id="create index UQE_quota_org_id_user_id_target - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.62947639Z level=info msg="Executing migration" id="Update quota table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.635372963Z level=info msg="Executing migration" id="create plugin_setting table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.642736594Z level=info msg="Executing migration" id="create index UQE_plugin_setting_org_id_plugin_id - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.649945149Z level=info msg="Executing migration" id="Add column plugin_version to plugin_settings"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.656998706Z level=info msg="Executing migration" id="Update plugin_setting table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.665487557Z level=info msg="Executing migration" id="create session table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.673432273Z level=info msg="Executing migration" id="Drop old table playlist table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.680600231Z level=info msg="Executing migration" id="Drop old table playlist_item table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.692966767Z level=info msg="Executing migration" id="create playlist table v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.700039573Z level=info msg="Executing migration" id="create playlist item table v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.706427573Z level=info msg="Executing migration" id="Update playlist table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.715439576Z level=info msg="Executing migration" id="Update playlist_item table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.723510658Z level=info msg="Executing migration" id="drop preferences table v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.732208769Z level=info msg="Executing migration" id="drop preferences table v3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.739451106Z level=info msg="Executing migration" id="create preferences table v3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.749506045Z level=info msg="Executing migration" id="Update preferences table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.757806062Z level=info msg="Executing migration" id="Add column team_id in preferences"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.766084083Z level=info msg="Executing migration" id="Update team_id column values in preferences"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.77242813Z level=info msg="Executing migration" id="Add column week_start in preferences"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.780155699Z level=info msg="Executing migration" id="Add column preferences.json_data"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.788120572Z level=info msg="Executing migration" id="alter preferences.json_data to mediumtext v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.79601644Z level=info msg="Executing migration" id="Add preferences index org_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.804029178Z level=info msg="Executing migration" id="Add preferences index user_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.811452751Z level=info msg="Executing migration" id="create alert table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.821028062Z level=info msg="Executing migration" id="add index alert org_id & id "
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.828817955Z level=info msg="Executing migration" id="add index alert state"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.837223562Z level=info msg="Executing migration" id="add index alert dashboard_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.844681605Z level=info msg="Executing migration" id="Create alert_rule_tag table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.851924691Z level=info msg="Executing migration" id="Add unique index alert_rule_tag.alert_id_tag_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.860939074Z level=info msg="Executing migration" id="drop index UQE_alert_rule_tag_alert_id_tag_id - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.870477688Z level=info msg="Executing migration" id="Rename table alert_rule_tag to alert_rule_tag_v1 - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.881088402Z level=info msg="Executing migration" id="Create alert_rule_tag table v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.887550472Z level=info msg="Executing migration" id="create index UQE_alert_rule_tag_alert_id_tag_id - Add unique index alert_rule_tag.alert_id_tag_id V2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.895859624Z level=info msg="Executing migration" id="copy alert_rule_tag v1 to v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.902288604Z level=info msg="Executing migration" id="drop table alert_rule_tag_v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.909103629Z level=info msg="Executing migration" id="create alert_notification table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.916272055Z level=info msg="Executing migration" id="Add column is_default"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.923422597Z level=info msg="Executing migration" id="Add column frequency"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.933097609Z level=info msg="Executing migration" id="Add column send_reminder"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.944303339Z level=info msg="Executing migration" id="Add column disable_resolve_message"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.953254877Z level=info msg="Executing migration" id="add index alert_notification org_id & name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.962334017Z level=info msg="Executing migration" id="Update alert table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.96975782Z level=info msg="Executing migration" id="Update alert_notification table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.977903286Z level=info msg="Executing migration" id="create notification_journal table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.987774802Z level=info msg="Executing migration" id="add index notification_journal org_id & alert_id & notifier_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.000466986Z level=info msg="Executing migration" id="drop alert_notification_journal"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.009519031Z level=info msg="Executing migration" id="create alert_notification_state table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.031390933Z level=info msg="Executing migration" id="add index alert_notification_state org_id & alert_id & notifier_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.04107795Z level=info msg="Executing migration" id="Add for to alert table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.052017208Z level=info msg="Executing migration" id="Add column uid in alert_notification"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.066202911Z level=info msg="Executing migration" id="Update uid column values in alert_notification"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.073854902Z level=info msg="Executing migration" id="Add unique index alert_notification_org_id_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.083991521Z level=info msg="Executing migration" id="Remove unique index org_id_name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.093339333Z level=info msg="Executing migration" id="Add column secure_settings in alert_notification"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.102795541Z level=info msg="Executing migration" id="alter alert.settings to mediumtext"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.111541396Z level=info msg="Executing migration" id="Add non-unique index alert_notification_state_alert_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.120487431Z level=info msg="Executing migration" id="Add non-unique index alert_rule_tag_alert_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.13152898Z level=info msg="Executing migration" id="Drop old annotation table v4"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.140146084Z level=info msg="Executing migration" id="create annotation table v5"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.149189Z level=info msg="Executing migration" id="add index annotation 0 v3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.157427858Z level=info msg="Executing migration" id="add index annotation 1 v3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.165801776Z level=info msg="Executing migration" id="add index annotation 2 v3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.172910017Z level=info msg="Executing migration" id="add index annotation 3 v3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.180996326Z level=info msg="Executing migration" id="add index annotation 4 v3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.191239608Z level=info msg="Executing migration" id="Update annotation table charset"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.200070181Z level=info msg="Executing migration" id="Add column region_id to annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.208734931Z level=info msg="Executing migration" id="Drop category_id index"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.216859656Z level=info msg="Executing migration" id="Add column tags to annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.224097675Z level=info msg="Executing migration" id="Create annotation_tag table v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.234677428Z level=info msg="Executing migration" id="Add unique index annotation_tag.annotation_id_tag_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.242492144Z level=info msg="Executing migration" id="drop index UQE_annotation_tag_annotation_id_tag_id - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.251184262Z level=info msg="Executing migration" id="Rename table annotation_tag to annotation_tag_v2 - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.262600283Z level=info msg="Executing migration" id="Create annotation_tag table v3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.272145826Z level=info msg="Executing migration" id="create index UQE_annotation_tag_annotation_id_tag_id - Add unique index annotation_tag.annotation_id_tag_id V3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.282257549Z level=info msg="Executing migration" id="copy annotation_tag v2 to v3"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.289050624Z level=info msg="Executing migration" id="drop table annotation_tag_v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.297360371Z level=info msg="Executing migration" id="Update alert annotations and set TEXT to empty"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.304057542Z level=info msg="Executing migration" id="Add created time to annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.312234625Z level=info msg="Executing migration" id="Add updated time to annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.320527368Z level=info msg="Executing migration" id="Add index for created in annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.328204435Z level=info msg="Executing migration" id="Add index for updated in annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.33697143Z level=info msg="Executing migration" id="Convert existing annotations from seconds to milliseconds"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.345148842Z level=info msg="Executing migration" id="Add epoch_end column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.354032448Z level=info msg="Executing migration" id="Add index for epoch_end"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.366312068Z level=info msg="Executing migration" id="Make epoch_end the same as epoch"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.373668225Z level=info msg="Executing migration" id="Move region to single row"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.383286028Z level=info msg="Executing migration" id="Remove index org_id_epoch from annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.393791561Z level=info msg="Executing migration" id="Remove index org_id_dashboard_id_panel_id_epoch from annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.402451413Z level=info msg="Executing migration" id="Add index for org_id_dashboard_id_epoch_end_epoch on annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.409916055Z level=info msg="Executing migration" id="Add index for org_id_epoch_end_epoch on annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.418360673Z level=info msg="Executing migration" id="Remove index org_id_epoch_epoch_end from annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.426487043Z level=info msg="Executing migration" id="Add index for alert_id on annotation table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.436674988Z level=info msg="Executing migration" id="Increase tags column to length 4096"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.444920383Z level=info msg="Executing migration" id="create test_data table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.453716894Z level=info msg="Executing migration" id="create dashboard_version table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.461678676Z level=info msg="Executing migration" id="add index dashboard_version.dashboard_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.47021976Z level=info msg="Executing migration" id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.47792766Z level=info msg="Executing migration" id="Set dashboard version to 1 where 0"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.485653791Z level=info msg="Executing migration" id="save existing dashboard data in dashboard_version table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.494259615Z level=info msg="Executing migration" id="alter dashboard_version.data to mediumtext v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.502218981Z level=info msg="Executing migration" id="create team table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.510533125Z level=info msg="Executing migration" id="add index team.org_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.520581035Z level=info msg="Executing migration" id="add unique index team_org_id_name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.528988781Z level=info msg="Executing migration" id="create team member table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.537571112Z level=info msg="Executing migration" id="add index team_member.org_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.54941581Z level=info msg="Executing migration" id="add unique index team_member_org_id_team_id_user_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.562988806Z level=info msg="Executing migration" id="add index team_member.team_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.571650265Z level=info msg="Executing migration" id="Add column email to team table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.57948822Z level=info msg="Executing migration" id="Add column external to team_member table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.590431068Z level=info msg="Executing migration" id="Add column permission to team_member table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.601612923Z level=info msg="Executing migration" id="create dashboard acl table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.609435372Z level=info msg="Executing migration" id="add index dashboard_acl_dashboard_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.617136648Z level=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_user_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.624020367Z level=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_team_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.632513333Z level=info msg="Executing migration" id="add index dashboard_acl_user_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.640372816Z level=info msg="Executing migration" id="add index dashboard_acl_team_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.648297221Z level=info msg="Executing migration" id="add index dashboard_acl_org_id_role"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.656126802Z level=info msg="Executing migration" id="add index dashboard_permission"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.664792221Z level=info msg="Executing migration" id="save default acl rules in dashboard_acl table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.671945523Z level=info msg="Executing migration" id="delete acl rules for deleted dashboards and folders"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.679120728Z level=info msg="Executing migration" id="create tag table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.686325695Z level=info msg="Executing migration" id="add index tag.key_value"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.695437775Z level=info msg="Executing migration" id="create login attempt table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.703122582Z level=info msg="Executing migration" id="add index login_attempt.username"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.711875247Z level=info msg="Executing migration" id="drop index IDX_login_attempt_username - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.719026774Z level=info msg="Executing migration" id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.728281409Z level=info msg="Executing migration" id="create login_attempt v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.735129714Z level=info msg="Executing migration" id="create index IDX_login_attempt_username - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.742244709Z level=info msg="Executing migration" id="copy login_attempt v1 to v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.748409494Z level=info msg="Executing migration" id="drop login_attempt_tmp_qwerty"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.755553089Z level=info msg="Executing migration" id="create user auth table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.763322456Z level=info msg="Executing migration" id="create index IDX_user_auth_auth_module_auth_id - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.771176566Z level=info msg="Executing migration" id="alter user_auth.auth_id to length 190"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.778858854Z level=info msg="Executing migration" id="Add OAuth access token to user_auth"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.787437546Z level=info msg="Executing migration" id="Add OAuth refresh token to user_auth"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.797703191Z level=info msg="Executing migration" id="Add OAuth token type to user_auth"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.810272145Z level=info msg="Executing migration" id="Add OAuth expiry to user_auth"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.819282204Z level=info msg="Executing migration" id="Add index to user_id column in user_auth"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.827578476Z level=info msg="Executing migration" id="Add OAuth ID token to user_auth"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.835044162Z level=info msg="Executing migration" id="create server_lock table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.842650547Z level=info msg="Executing migration" id="add index server_lock.operation_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.850926722Z level=info msg="Executing migration" id="create user auth token table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.857060008Z level=info msg="Executing migration" id="add unique index user_auth_token.auth_token"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.86403264Z level=info msg="Executing migration" id="add unique index user_auth_token.prev_auth_token"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.873857652Z level=info msg="Executing migration" id="add index user_auth_token.user_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.881247858Z level=info msg="Executing migration" id="Add revoked_at to the user auth token"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.888055546Z level=info msg="Executing migration" id="create cache_data table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.897360169Z level=info msg="Executing migration" id="add unique index cache_data.cache_key"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.905369406Z level=info msg="Executing migration" id="create short_url table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.914766281Z level=info msg="Executing migration" id="add index short_url.org_id-uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.923101962Z level=info msg="Executing migration" id="alter table short_url alter column created_by type to bigint"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.930868865Z level=info msg="Executing migration" id="delete alert_definition table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.9361307Z level=info msg="Executing migration" id="recreate alert_definition table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.946461661Z level=info msg="Executing migration" id="add index in alert_definition on org_id and title columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.955813348Z level=info msg="Executing migration" id="add index in alert_definition on org_id and uid columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.966065863Z level=info msg="Executing migration" id="alter alert_definition table data column to mediumtext in mysql"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.972732481Z level=info msg="Executing migration" id="drop index in alert_definition on org_id and title columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.980716576Z level=info msg="Executing migration" id="drop index in alert_definition on org_id and uid columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.989373452Z level=info msg="Executing migration" id="add unique index in alert_definition on org_id and title columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.999121746Z level=info msg="Executing migration" id="add unique index in alert_definition on org_id and uid columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.006786229Z level=info msg="Executing migration" id="Add column paused in alert_definition"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.016673238Z level=info msg="Executing migration" id="drop alert_definition table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.024529864Z level=info msg="Executing migration" id="delete alert_definition_version table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.033534821Z level=info msg="Executing migration" id="recreate alert_definition_version table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.039277791Z level=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_id and version columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.04881598Z level=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_uid and version columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.057130868Z level=info msg="Executing migration" id="alter alert_definition_version table data column to mediumtext in mysql"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.066211588Z level=info msg="Executing migration" id="drop alert_definition_version table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.077982205Z level=info msg="Executing migration" id="create alert_instance table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.088482118Z level=info msg="Executing migration" id="add index in alert_instance table on def_org_id, def_uid and current_state columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.098870941Z level=info msg="Executing migration" id="add index in alert_instance table on def_org_id, current_state columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.117114097Z level=info msg="Executing migration" id="add column current_state_end to alert_instance"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.125563276Z level=info msg="Executing migration" id="remove index def_org_id, def_uid, current_state on alert_instance"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.132828401Z level=info msg="Executing migration" id="remove index def_org_id, current_state on alert_instance"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.140616383Z level=info msg="Executing migration" id="rename def_org_id to rule_org_id in alert_instance"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.15479569Z level=info msg="Executing migration" id="rename def_uid to rule_uid in alert_instance"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.16807252Z level=info msg="Executing migration" id="add index rule_org_id, rule_uid, current_state on alert_instance"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.176942523Z level=info msg="Executing migration" id="add index rule_org_id, current_state on alert_instance"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.188790652Z level=info msg="Executing migration" id="add current_reason column related to current_state"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.200992373Z level=info msg="Executing migration" id="create alert_rule table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.209253131Z level=info msg="Executing migration" id="add index in alert_rule on org_id and title columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.218324869Z level=info msg="Executing migration" id="add index in alert_rule on org_id and uid columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.227061641Z level=info msg="Executing migration" id="add index in alert_rule on org_id, namespace_uid, group_uid columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.236730119Z level=info msg="Executing migration" id="alter alert_rule table data column to mediumtext in mysql"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.244635783Z level=info msg="Executing migration" id="add column for to alert_rule"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.253725152Z level=info msg="Executing migration" id="add column annotations to alert_rule"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.261487605Z level=info msg="Executing migration" id="add column labels to alert_rule"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.273153807Z level=info msg="Executing migration" id="remove unique index from alert_rule on org_id, title columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.282006359Z level=info msg="Executing migration" id="add index in alert_rule on org_id, namespase_uid and title columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.290423079Z level=info msg="Executing migration" id="add dashboard_uid column to alert_rule"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.299972845Z level=info msg="Executing migration" id="add panel_id column to alert_rule"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.310352439Z level=info msg="Executing migration" id="add index in alert_rule on org_id, dashboard_uid and panel_id columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.32053396Z level=info msg="Executing migration" id="add rule_group_idx column to alert_rule"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.329905677Z level=info msg="Executing migration" id="add is_paused column to alert_rule table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.339878405Z level=info msg="Executing migration" id="fix is_paused column for alert_rule table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.350039969Z level=info msg="Executing migration" id="create alert_rule_version table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.360726536Z level=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_uid and version columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.37034767Z level=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_namespace_uid and rule_group columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.379060606Z level=info msg="Executing migration" id="alter alert_rule_version table data column to mediumtext in mysql"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.386959303Z level=info msg="Executing migration" id="add column for to alert_rule_version"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.394685395Z level=info msg="Executing migration" id="add column annotations to alert_rule_version"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.402381309Z level=info msg="Executing migration" id="add column labels to alert_rule_version"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.41076243Z level=info msg="Executing migration" id="add rule_group_idx column to alert_rule_version"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.41803649Z level=info msg="Executing migration" id="add is_paused column to alert_rule_versions table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.425245034Z level=info msg="Executing migration" id="fix is_paused column for alert_rule_version table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.433821848Z level=info msg="Executing migration" id=create_alert_configuration_table
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.441984193Z level=info msg="Executing migration" id="Add column default in alert_configuration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.452008059Z level=info msg="Executing migration" id="alert alert_configuration alertmanager_configuration column from TEXT to MEDIUMTEXT if mysql"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.459706103Z level=info msg="Executing migration" id="add column org_id in alert_configuration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.470518329Z level=info msg="Executing migration" id="add index in alert_configuration table on org_id column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.478213814Z level=info msg="Executing migration" id="add configuration_hash column to alert_configuration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.487734658Z level=info msg="Executing migration" id=create_ngalert_configuration_table
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.496927916Z level=info msg="Executing migration" id="add index in ngalert_configuration on org_id column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.504726359Z level=info msg="Executing migration" id="add column send_alerts_to in ngalert_configuration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.514039407Z level=info msg="Executing migration" id="create provenance_type table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.521776933Z level=info msg="Executing migration" id="add index to uniquify (record_key, record_type, org_id) columns"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.531028021Z level=info msg="Executing migration" id="create alert_image table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.539189065Z level=info msg="Executing migration" id="add unique index on token to alert_image table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.547599413Z level=info msg="Executing migration" id="support longer URLs in alert_image table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.553853916Z level=info msg="Executing migration" id=create_alert_configuration_history_table
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.565231371Z level=info msg="Executing migration" id="drop non-unique orgID index on alert_configuration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.574414915Z level=info msg="Executing migration" id="drop unique orgID index on alert_configuration if exists"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.574746124Z level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop unique orgID index on alert_configuration if exists"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.583280093Z level=info msg="Executing migration" id="extract alertmanager configuration history to separate table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.594383011Z level=info msg="Executing migration" id="add unique index on orgID to alert_configuration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.60280756Z level=info msg="Executing migration" id="add last_applied column to alert_configuration_history"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.610574863Z level=info msg="Executing migration" id="clear migration entry \"remove unified alerting data\""
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.611034788Z level=info msg="Executing migration" id="move dashboard alerts to unified alerting"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.611394263Z level=info msg="alerts found to migrate" alerts=0
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.61895495Z level=info msg="Executing migration" id="create library_element table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.628573786Z level=info msg="Executing migration" id="add index library_element org_id-folder_id-name-kind"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.641481357Z level=info msg="Executing migration" id="create library_element_connection table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.65015811Z level=info msg="Executing migration" id="add index library_element_connection element_id-kind-connection_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.658190282Z level=info msg="Executing migration" id="add unique index library_element org_id_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.667572813Z level=info msg="Executing migration" id="increase max description length to 2048"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.675564168Z level=info msg="Executing migration" id="alter library_element model to mediumtext"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.683650729Z level=info msg="Executing migration" id="clone move dashboard alerts to unified alerting"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.691366983Z level=info msg="Executing migration" id="create data_keys table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.70022048Z level=info msg="Executing migration" id="create secrets table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.706927043Z level=info msg="Executing migration" id="rename data_keys name column to id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.722554669Z level=info msg="Executing migration" id="add name column into data_keys"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.73121874Z level=info msg="Executing migration" id="copy data_keys id column values into name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.737768835Z level=info msg="Executing migration" id="rename data_keys name column to label"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.751305838Z level=info msg="Executing migration" id="rename data_keys id column back to name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.769027173Z level=info msg="Executing migration" id="create kv_store table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.782365887Z level=info msg="Executing migration" id="add index kv_store.org_id-namespace-key"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.791291847Z level=info msg="Executing migration" id="update dashboard_uid and panel_id from existing annotations"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.799780212Z level=info msg="Executing migration" id="create permission table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.807392231Z level=info msg="Executing migration" id="add unique index permission.role_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.816815215Z level=info msg="Executing migration" id="add unique index role_id_action_scope"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.825205928Z level=info msg="Executing migration" id="create role table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.834888826Z level=info msg="Executing migration" id="add column display_name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.844577992Z level=info msg="Executing migration" id="add column group_name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.852470924Z level=info msg="Executing migration" id="add index role.org_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.861237905Z level=info msg="Executing migration" id="add unique index role_org_id_name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.871730459Z level=info msg="Executing migration" id="add index role_org_id_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.879824086Z level=info msg="Executing migration" id="create team role table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.888519437Z level=info msg="Executing migration" id="add index team_role.org_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.898774378Z level=info msg="Executing migration" id="add unique index team_role_org_id_team_id_role_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.907532813Z level=info msg="Executing migration" id="add index team_role.team_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.915707985Z level=info msg="Executing migration" id="create user role table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.923107282Z level=info msg="Executing migration" id="add index user_role.org_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.931199601Z level=info msg="Executing migration" id="add unique index user_role_org_id_user_id_role_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.939717835Z level=info msg="Executing migration" id="add index user_role.user_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.947133283Z level=info msg="Executing migration" id="create builtin role table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.954495831Z level=info msg="Executing migration" id="add index builtin_role.role_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.961931223Z level=info msg="Executing migration" id="add index builtin_role.name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.97216594Z level=info msg="Executing migration" id="Add column org_id to builtin_role table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.983311822Z level=info msg="Executing migration" id="add index builtin_role.org_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.992931328Z level=info msg="Executing migration" id="add unique index builtin_role_org_id_role_id_role"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.002997725Z level=info msg="Executing migration" id="Remove unique index role_org_id_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.011909112Z level=info msg="Executing migration" id="add unique index role.uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.019981291Z level=info msg="Executing migration" id="create seed assignment table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.03126198Z level=info msg="Executing migration" id="add unique index builtin_role_role_name"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.040733336Z level=info msg="Executing migration" id="add column hidden to role table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.050750535Z level=info msg="Executing migration" id="create query_history table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.060300551Z level=info msg="Executing migration" id="add index query_history.org_id-created_by-datasource_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.071899952Z level=info msg="Executing migration" id="alter table query_history alter column created_by type to bigint"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.08141553Z level=info msg="Executing migration" id="rbac disabled migrator"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.08847423Z level=info msg="Executing migration" id="teams permissions migration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.104783723Z level=info msg="Executing migration" id="dashboard permissions"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.11445957Z level=info msg="Executing migration" id="dashboard permissions uid scopes"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.122240635Z level=info msg="Executing migration" id="drop managed folder create actions"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.132570431Z level=info msg="Executing migration" id="alerting notification permissions"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.139159559Z level=info msg="Executing migration" id="create query_history_star table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.147330445Z level=info msg="Executing migration" id="add index query_history.user_id-query_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.154458255Z level=info msg="Executing migration" id="add column org_id in query_history_star"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.162729433Z level=info msg="Executing migration" id="alter table query_history_star_mig column user_id type to bigint"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.169470058Z level=info msg="Executing migration" id="create correlation table v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.176925896Z level=info msg="Executing migration" id="add index correlations.uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.185571508Z level=info msg="Executing migration" id="add index correlations.source_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.195032039Z level=info msg="Executing migration" id="add correlation config column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.20390528Z level=info msg="Executing migration" id="create entity_events table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.210120132Z level=info msg="Executing migration" id="create dashboard public config v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.219337205Z level=info msg="Executing migration" id="drop index UQE_dashboard_public_config_uid - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.219799375Z level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop index UQE_dashboard_public_config_uid - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.22581714Z level=info msg="Executing migration" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.226198599Z level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.233771361Z level=info msg="Executing migration" id="Drop old dashboard public config table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.243406022Z level=info msg="Executing migration" id="recreate dashboard public config v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.249878824Z level=info msg="Executing migration" id="create index UQE_dashboard_public_config_uid - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.261415032Z level=info msg="Executing migration" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.27081393Z level=info msg="Executing migration" id="drop index UQE_dashboard_public_config_uid - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.278398069Z level=info msg="Executing migration" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.288384908Z level=info msg="Executing migration" id="Drop public config table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.294367488Z level=info msg="Executing migration" id="Recreate dashboard public config v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.302302519Z level=info msg="Executing migration" id="create index UQE_dashboard_public_config_uid - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.308678641Z level=info msg="Executing migration" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.316111516Z level=info msg="Executing migration" id="create index UQE_dashboard_public_config_access_token - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.323120059Z level=info msg="Executing migration" id="Rename table dashboard_public_config to dashboard_public - v2"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.336199645Z level=info msg="Executing migration" id="add annotations_enabled column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.343262221Z level=info msg="Executing migration" id="add time_selection_enabled column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.349027711Z level=info msg="Executing migration" id="delete orphaned public dashboards"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.354434287Z level=info msg="Executing migration" id="add share column"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.364828849Z level=info msg="Executing migration" id="backfill empty share column fields with default of public"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.37354054Z level=info msg="Executing migration" id="create default alerting folders"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.383135222Z level=info msg="Executing migration" id="create file table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.390216857Z level=info msg="Executing migration" id="file table idx: path natural pk"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.399939619Z level=info msg="Executing migration" id="file table idx: parent_folder_path_hash fast folder retrieval"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.407421536Z level=info msg="Executing migration" id="create file_meta table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.416802004Z level=info msg="Executing migration" id="file table idx: path key"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.425810317Z level=info msg="Executing migration" id="set path collation in file table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.434053175Z level=info msg="Executing migration" id="managed permissions migration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.442178168Z level=info msg="Executing migration" id="managed folder permissions alert actions migration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.451593941Z level=info msg="Executing migration" id="RBAC action name migrator"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.460095128Z level=info msg="Executing migration" id="Add UID column to playlist"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.471662276Z level=info msg="Executing migration" id="Update uid column values in playlist"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.480083329Z level=info msg="Executing migration" id="Add index for uid in playlist"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.489927345Z level=info msg="Executing migration" id="update group index for alert rules"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.499376699Z level=info msg="Executing migration" id="managed folder permissions alert actions repeated migration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.508228994Z level=info msg="Executing migration" id="admin only folder/dashboard permission"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.517653463Z level=info msg="Executing migration" id="add action column to seed_assignment"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.529484485Z level=info msg="Executing migration" id="add scope column to seed_assignment"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.539442102Z level=info msg="Executing migration" id="remove unique index builtin_role_role_name before nullable update"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.548576075Z level=info msg="Executing migration" id="update seed_assignment role_name column to nullable"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.573318705Z level=info msg="Executing migration" id="add unique index builtin_role_name back"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.583912258Z level=info msg="Executing migration" id="add unique index builtin_role_action_scope"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.593265198Z level=info msg="Executing migration" id="add primary key to seed_assigment"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.609277708Z level=info msg="Executing migration" id="managed folder permissions alert actions repeated fixed migration"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.61672985Z level=info msg="Executing migration" id="migrate external alertmanagers to datsourcse"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.624209045Z level=info msg="Executing migration" id="create folder table"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.633338094Z level=info msg="Executing migration" id="Add index for parent_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.642960085Z level=info msg="Executing migration" id="Add unique index for folder.uid and folder.org_id"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.653371146Z level=info msg="Executing migration" id="Update folder title length"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.663885476Z level=info msg="Executing migration" id="Add unique index for folder.title and folder.parent_uid"
-quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.674014645Z level=info msg="migrations completed" performed=489 skipped=0 duration=4.657528951s
-quickbite-grafana  | logger=sqlstore t=2026-09-15T12:50:58.689964246Z level=info msg="Created default admin" user=admin
-quickbite-grafana  | logger=sqlstore t=2026-09-15T12:50:58.690280816Z level=info msg="Created default organization"
-quickbite-grafana  | logger=secrets t=2026-09-15T12:50:58.699085602Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
-quickbite-grafana  | logger=local.finder t=2026-09-15T12:50:58.760564861Z level=warn msg="Skipping finding plugins as directory does not exist" path=/usr/share/grafana/plugins-bundled
-quickbite-grafana  | logger=query_data t=2026-09-15T12:50:58.765165068Z level=info msg="Query Service initialization"
-quickbite-grafana  | logger=live.push_http t=2026-09-15T12:50:58.770311438Z level=info msg="Live Push Gateway initialization"
-quickbite-grafana  | logger=infra.usagestats.collector t=2026-09-15T12:51:00.218160229Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
-quickbite-grafana  | logger=provisioning.datasources t=2026-09-15T12:51:00.22633389Z level=info msg="inserting datasource from configuration " name=Prometheus uid=PBFA97CFB590B2093
-quickbite-grafana  | logger=provisioning.plugins t=2026-09-15T12:51:00.24779727Z level=error msg="Failed to read plugin provisioning files from directory" path=/etc/grafana/provisioning/plugins error="open /etc/grafana/provisioning/plugins: no such file or directory"
-quickbite-grafana  | logger=provisioning.notifiers t=2026-09-15T12:51:00.248133449Z level=error msg="Can't read alert notification provisioning files from directory" path=/etc/grafana/provisioning/notifiers error="open /etc/grafana/provisioning/notifiers: no such file or directory"
-quickbite-grafana  | logger=provisioning.alerting t=2026-09-15T12:51:00.248630524Z level=error msg="can't read alerting provisioning files from directory" path=/etc/grafana/provisioning/alerting error="open /etc/grafana/provisioning/alerting: no such file or directory"
-quickbite-grafana  | logger=provisioning.alerting t=2026-09-15T12:51:00.248670945Z level=info msg="starting to provision alerting"
-quickbite-grafana  | logger=provisioning.alerting t=2026-09-15T12:51:00.248685323Z level=info msg="finished to provision alerting"
-quickbite-grafana  | logger=modules t=2026-09-15T12:51:00.24896462Z level=warn msg="No modules registered..."
-quickbite-grafana  | logger=grafanaStorageLogger t=2026-09-15T12:51:00.249097878Z level=info msg="storage starting"
-quickbite-grafana  | logger=ngalert.state.manager t=2026-09-15T12:51:00.249345811Z level=info msg="Warming state cache for startup"
-quickbite-grafana  | logger=ngalert.state.manager t=2026-09-15T12:51:00.249483836Z level=info msg="State cache has been initialized" states=0 duration=138.515µs
-quickbite-grafana  | logger=ticker t=2026-09-15T12:51:00.249568223Z level=info msg=starting first_tick=2026-09-15T12:51:10Z
-quickbite-grafana  | logger=ngalert.multiorg.alertmanager t=2026-09-15T12:51:00.249630648Z level=info msg="starting MultiOrg Alertmanager"
-quickbite-grafana  | logger=provisioning.dashboard t=2026-09-15T12:51:00.250419898Z level=error msg="can't read dashboard provisioning files from directory" path=/etc/grafana/provisioning/dashboards error="open /etc/grafana/provisioning/dashboards: no such file or directory"
-quickbite-grafana  | logger=http.server t=2026-09-15T12:51:00.252288085Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
-quickbite-grafana  | logger=sqlstore.transactions t=2026-09-15T12:51:00.259707475Z level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
-quickbite-grafana  | logger=grafana.update.checker t=2026-09-15T12:51:00.458896802Z level=info msg="Update check succeeded" duration=209.613568ms
-quickbite-grafana  | logger=plugins.update.checker t=2026-09-15T12:51:00.615833911Z level=info msg="Update check succeeded" duration=366.147719ms
-quickbite-grafana  | logger=context userId=0 orgId=0 uname= t=2026-09-15T12:51:26.16260878Z level=info msg="Request Completed" method=GET path=/ status=302 remote_addr=172.18.0.1 time_ms=1 duration=1.056471ms size=29 referer= handler=/
-quickbite-grafana  | logger=http.server t=2026-09-15T12:51:42.103312126Z level=info msg="Successful Login" User=admin@localhost
-quickbite-grafana  | logger=context userId=1 orgId=1 uname=admin t=2026-09-15T12:52:01.274922414Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=3 duration=3.188109ms size=0 referer= handler=/api/live/ws
-quickbite-grafana  | logger=context userId=1 orgId=1 uname=admin t=2026-09-15T13:00:37.732638689Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=1 duration=1.848625ms size=0 referer= handler=/api/live/ws
-quickbite-grafana  | logger=cleanup t=2026-09-15T13:01:00.18801656Z level=info msg="Completed cleanup jobs" duration=4.747405ms
-quickbite-grafana  | logger=sqlstore.transactions t=2026-09-15T13:01:00.196295131Z level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
-quickbite-grafana  | logger=grafana.update.checker t=2026-09-15T13:01:00.624616495Z level=info msg="Update check succeeded" duration=230.812447ms
-quickbite-grafana  | logger=plugins.update.checker t=2026-09-15T13:01:00.898345847Z level=info msg="Update check succeeded" duration=339.670631ms
-quickbite-grafana  | logger=context userId=1 orgId=1 uname=admin t=2026-09-15T13:01:06.391669675Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=2 duration=2.055941ms size=0 referer= handler=/api/live/ws
-quickbite-grafana  | logger=context userId=1 orgId=1 uname=admin t=2026-09-15T13:02:22.748215701Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=32 duration=32.595625ms size=0 referer= handler=/api/live/ws
-quickbite-grafana  | logger=context userId=1 orgId=1 uname=admin t=2026-09-15T13:02:25.036626349Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=2 duration=2.016124ms size=0 referer= handler=/api/live/ws
-quickbite-grafana  | logger=context userId=1 orgId=1 uname=admin t=2026-09-15T13:02:26.168647066Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=1 duration=1.746451ms size=0 referer= handler=/api/live/ws
-quickbite-grafana  | logger=context userId=1 orgId=1 uname=admin t=2026-09-15T13:02:27.236510514Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=3 duration=3.173086ms size=0 referer= handler=/api/live/ws
-quickbite-grafana  | logger=context userId=1 orgId=1 uname=admin t=2026-09-15T13:02:36.095930185Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=33 duration=33.734825ms size=0 referer= handler=/api/live/ws
-quickbite-grafana  | logger=context userId=1 orgId=1 uname=admin t=2026-09-15T13:02:45.00684048Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=1 duration=1.42894ms size=0 referer= handler=/api/live/ws
-What's next:
-    Filter, search, and stream logs from all your Compose services
-    in one place with Docker Desktop's Logs view. docker-desktop://dashboard/logs?appId=quickbite-monitoring-demo
+time="2026-09-15T20:05:13+07:00" level=warning msg="C:\\Users\\a\\.gemini\\antigravity\\scratch\\quickbite-monitoring-demo\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013625214Z
+level=info msg="Config overridden from command line"
+arg="default.paths.provisioning=/etc/grafana/provisioning"
+quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013646736Z
+level=info msg="Config overridden from Environment variable"
+var="GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
+quickbite-grafana  | logger=settings t=2026-09-15T12:50:54.013685163Z
+level=info msg="Path Provisioning" path=/etc/grafana/provisioning
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.481426645Z
+level=info msg="Executing migration" id="add unique index
+star.user_id_dashboard_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.601888101Z
+level=info msg="Executing migration" id="create dashboard table"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.613332618Z
+level=info msg="Executing migration" id="add index dashboard.account_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.625298917Z
+level=info msg="Executing migration" id="add unique index
+dashboard_account_id_slug"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.637253041Z
+level=info msg="Executing migration" id="create dashboard_tag table"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.653720567Z
+level=info msg="Executing migration" id="add unique index
+dashboard_tag.dasboard_id_term"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.673668892Z
+level=info msg="Executing migration" id="drop index
+UQE_dashboard_tag_dashboard_id_term - v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.689615644Z
+level=info msg="Executing migration" id="Rename table dashboard to
+dashboard_v1 - v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.709285326Z
+level=info msg="Executing migration" id="create dashboard v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.72566802Z
+level=info msg="Executing migration" id="create index IDX_dashboard_org_id -
+v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.745147509Z
+level=info msg="Executing migration" id="create index
+UQE_dashboard_org_id_slug - v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.763698043Z
+level=info msg="Executing migration" id="copy dashboard v1 to v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.785444114Z
+level=info msg="Executing migration" id="drop table dashboard_v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.809918198Z
+level=info msg="Executing migration" id="alter dashboard.data to mediumtext v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.825684945Z
+level=info msg="Executing migration" id="Add column updated_by in dashboard -
+v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.837593894Z
+level=info msg="Executing migration" id="Add column created_by in dashboard -
+v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.848841723Z
+level=info msg="Executing migration" id="Add column gnetId in dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.867072301Z
+level=info msg="Executing migration" id="Add index for gnetId in dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.876958767Z
+level=info msg="Executing migration" id="Add column plugin_id in dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.886697067Z
+level=info msg="Executing migration" id="Add index for plugin_id in dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.898948421Z
+level=info msg="Executing migration" id="Add index for dashboard_id in
+dashboard_tag"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.908169756Z
+level=info msg="Executing migration" id="Update dashboard table charset"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.918190207Z
+level=info msg="Executing migration" id="Update dashboard_tag table charset"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.926259178Z
+level=info msg="Executing migration" id="Add column folder_id in dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.936383234Z
+level=info msg="Executing migration" id="Add column isFolder in dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.946176195Z
+level=info msg="Executing migration" id="Add column has_acl in dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.95362855Z
+level=info msg="Executing migration" id="Add column uid in dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.961033504Z
+level=info msg="Executing migration" id="Update uid column values in dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.968208022Z
+level=info msg="Executing migration" id="Add unique index dashboard_org_id_uid"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.98428143Z
+level=info msg="Executing migration" id="Update dashboard title length"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:54.993184169Z
+level=info msg="Executing migration" id="Add unique index for
+dashboard_org_id_title_folder_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.002767269Z
+level=info msg="Executing migration" id="create dashboard_provisioning"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.012573854Z
+level=info msg="Executing migration" id="Rename table dashboard_provisioning
+to dashboard_provisioning_tmp_qwerty - v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.022521819Z
+level=info msg="Executing migration" id="create dashboard_provisioning v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.033049571Z
+level=info msg="Executing migration" id="create index
+IDX_dashboard_provisioning_dashboard_id - v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.040729694Z
+level=info msg="Executing migration" id="create index
+IDX_dashboard_provisioning_dashboard_id_name - v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.053761612Z
+level=info msg="Executing migration" id="copy dashboard_provisioning v1 to v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.065925211Z
+level=info msg="Executing migration" id="drop
+dashboard_provisioning_tmp_qwerty"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.087059862Z
+level=info msg="Executing migration" id="Add index for dashboard_title"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.111217929Z
+level=info msg="Executing migration" id="delete tags for deleted dashboards"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.125758578Z
+level=info msg="Executing migration" id="delete stars for deleted dashboards"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.136884826Z
+level=info msg="Executing migration" id="Add index for dashboard_is_folder"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.148744829Z
+level=info msg="Executing migration" id="Add isPublic for dashboard"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.323686286Z
+level=info msg="Executing migration" id="Add unique index
+datasource_org_id_uid"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.333008901Z
+level=info msg="Executing migration" id="add unique index
+datasource_org_id_is_default"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.505992389Z
+level=info msg="Executing migration" id="create dashboard_snapshot table v4"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.514538899Z
+level=info msg="Executing migration" id="drop table dashboard_snapshot_v4 #1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.52212652Z
+level=info msg="Executing migration" id="create dashboard_snapshot table v5 #2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.53193778Z
+level=info msg="Executing migration" id="create index
+UQE_dashboard_snapshot_key - v5"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.540616655Z
+level=info msg="Executing migration" id="create index
+UQE_dashboard_snapshot_delete_key - v5"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.549749121Z
+level=info msg="Executing migration" id="create index
+IDX_dashboard_snapshot_user_id - v5"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.557555257Z
+level=info msg="Executing migration" id="alter dashboard_snapshot to
+mediumtext v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.565624294Z
+level=info msg="Executing migration" id="Update dashboard_snapshot table
+charset"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.574341242Z
+level=info msg="Executing migration" id="Add column external_delete_url to
+dashboard_snapshots table"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.584730465Z
+level=info msg="Executing migration" id="Add encrypted dashboard json column"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.596369431Z
+level=info msg="Executing migration" id="Change dashboard_encrypted column to
+MEDIUMBLOB"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:55.837223562Z
+level=info msg="Executing migration" id="add index alert dashboard_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.393791561Z
+level=info msg="Executing migration" id="Remove index
+org_id_dashboard_id_panel_id_epoch from annotation table"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.402451413Z
+level=info msg="Executing migration" id="Add index for
+org_id_dashboard_id_epoch_end_epoch on annotation table"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.453716894Z
+level=info msg="Executing migration" id="create dashboard_version table v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.461678676Z
+level=info msg="Executing migration" id="add index
+dashboard_version.dashboard_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.47021976Z
+level=info msg="Executing migration" id="add unique index
+dashboard_version.dashboard_id and dashboard_version.version"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.47792766Z
+level=info msg="Executing migration" id="Set dashboard version to 1 where 0"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.485653791Z
+level=info msg="Executing migration" id="save existing dashboard data in
+dashboard_version table v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.494259615Z
+level=info msg="Executing migration" id="alter dashboard_version.data to
+mediumtext v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.601612923Z
+level=info msg="Executing migration" id="create dashboard acl table"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.609435372Z
+level=info msg="Executing migration" id="add index dashboard_acl_dashboard_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.617136648Z
+level=info msg="Executing migration" id="add unique index
+dashboard_acl_dashboard_id_user_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.624020367Z
+level=info msg="Executing migration" id="add unique index
+dashboard_acl_dashboard_id_team_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.632513333Z
+level=info msg="Executing migration" id="add index dashboard_acl_user_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.640372816Z
+level=info msg="Executing migration" id="add index dashboard_acl_team_id"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.648297221Z
+level=info msg="Executing migration" id="add index dashboard_acl_org_id_role"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.656126802Z
+level=info msg="Executing migration" id="add index dashboard_permission"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.664792221Z
+level=info msg="Executing migration" id="save default acl rules in
+dashboard_acl table"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:56.671945523Z
+level=info msg="Executing migration" id="delete acl rules for deleted
+dashboards and folders"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.290423079Z
+level=info msg="Executing migration" id="add dashboard_uid column to
+alert_rule"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.310352439Z
+level=info msg="Executing migration" id="add index in alert_rule on org_id,
+dashboard_uid and panel_id columns"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.611034788Z
+level=info msg="Executing migration" id="move dashboard alerts to unified
+alerting"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.683650729Z
+level=info msg="Executing migration" id="clone move dashboard alerts to
+unified alerting"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:57.791291847Z
+level=info msg="Executing migration" id="update dashboard_uid and panel_id
+from existing annotations"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.060300551Z
+level=info msg="Executing migration" id="add index
+query_history.org_id-created_by-datasource_uid"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.104783723Z
+level=info msg="Executing migration" id="dashboard permissions"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.11445957Z
+level=info msg="Executing migration" id="dashboard permissions uid scopes"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.210120132Z
+level=info msg="Executing migration" id="create dashboard public config v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.219337205Z
+level=info msg="Executing migration" id="drop index
+UQE_dashboard_public_config_uid - v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.219799375Z
+level=warn msg="Skipping migration: Already executed, but not recorded in
+migration log" id="drop index UQE_dashboard_public_config_uid - v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.22581714Z
+level=info msg="Executing migration" id="drop index
+IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.226198599Z
+level=warn msg="Skipping migration: Already executed, but not recorded in
+migration log" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid
+- v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.233771361Z
+level=info msg="Executing migration" id="Drop old dashboard public config
+table"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.243406022Z
+level=info msg="Executing migration" id="recreate dashboard public config v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.249878824Z
+level=info msg="Executing migration" id="create index
+UQE_dashboard_public_config_uid - v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.261415032Z
+level=info msg="Executing migration" id="create index
+IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.27081393Z
+level=info msg="Executing migration" id="drop index
+UQE_dashboard_public_config_uid - v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.278398069Z
+level=info msg="Executing migration" id="drop index
+IDX_dashboard_public_config_org_id_dashboard_uid - v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.294367488Z
+level=info msg="Executing migration" id="Recreate dashboard public config v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.302302519Z
+level=info msg="Executing migration" id="create index
+UQE_dashboard_public_config_uid - v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.308678641Z
+level=info msg="Executing migration" id="create index
+IDX_dashboard_public_config_org_id_dashboard_uid - v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.316111516Z
+level=info msg="Executing migration" id="create index
+UQE_dashboard_public_config_access_token - v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.323120059Z
+level=info msg="Executing migration" id="Rename table dashboard_public_config
+to dashboard_public - v2"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.349027711Z
+level=info msg="Executing migration" id="delete orphaned public dashboards"
+quickbite-grafana  | logger=migrator t=2026-09-15T12:50:58.508228994Z
+level=info msg="Executing migration" id="admin only folder/dashboard
+permission"
+quickbite-grafana  | logger=provisioning.datasources
+t=2026-09-15T12:51:00.22633389Z level=info msg="inserting datasource from
+configuration " name=Prometheus uid=PBFA97CFB590B2093
+quickbite-grafana  | logger=provisioning.plugins
+t=2026-09-15T12:51:00.24779727Z level=error msg="Failed to read plugin
+provisioning files from directory" path=/etc/grafana/provisioning/plugins
+error="open /etc/grafana/provisioning/plugins: no such file or directory"
+quickbite-grafana  | logger=provisioning.notifiers
+t=2026-09-15T12:51:00.248133449Z level=error msg="Can't read alert
+notification provisioning files from directory"
+path=/etc/grafana/provisioning/notifiers error="open
+/etc/grafana/provisioning/notifiers: no such file or directory"
+quickbite-grafana  | logger=provisioning.alerting
+t=2026-09-15T12:51:00.248630524Z level=error msg="can't read alerting
+provisioning files from directory" path=/etc/grafana/provisioning/alerting
+error="open /etc/grafana/provisioning/alerting: no such file or directory"
+quickbite-grafana  | logger=provisioning.alerting
+t=2026-09-15T12:51:00.248670945Z level=info msg="starting to provision
+alerting"
+quickbite-grafana  | logger=provisioning.alerting
+t=2026-09-15T12:51:00.248685323Z level=info msg="finished to provision
+alerting"
+quickbite-grafana  | logger=provisioning.dashboard
+t=2026-09-15T12:51:00.250419898Z level=error msg="can't read dashboard
+provisioning files from directory" path=/etc/grafana/provisioning/dashboards
+error="open /etc/grafana/provisioning/dashboards: no such file or directory"

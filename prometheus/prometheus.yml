@@ -8,7 +8,7 @@ scrape_configs:
     metrics_path: '/actuator/prometheus'
     static_configs:
       - targets:
-          - 'order-service:8083'
+          - 'order-service:8686'
 
   # Job 2: Thu thập metrics tài nguyên VPS Host qua Node Exporter
   - job_name: 'vps-hardware'
