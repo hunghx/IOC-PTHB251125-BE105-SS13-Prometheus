@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Microservice order-service
+  order-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quickbite-order-service
+    ports:
+      - "8083:8083"
+    networks:
+      - quickbite-net
+
+  # Prometheus Server
+  prometheus:
+    image: prom/prometheus:v2.45.0
+    container_name: quickbite-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    networks:
+      - quickbite-net
+
+  # Node Exporter cho giám sát phần cứng VPS Host
+  node-exporter:
+    image: prom/node-exporter:v1.6.0
+    container_name: quickbite-node-exporter
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+    networks:
+      - quickbite-net
+
+networks:
+  quickbite-net:
+    driver: bridge
+
+volumes:
+  prometheus-data:

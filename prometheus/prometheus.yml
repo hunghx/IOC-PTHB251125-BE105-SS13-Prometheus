@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Job 1: Thu thập metrics từ Spring Boot Microservices
+  - job_name: 'quickbite-backend'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets:
+          - 'order-service:8083'
+
+  # Job 2: Thu thập metrics tài nguyên VPS Host qua Node Exporter
+  - job_name: 'vps-hardware'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets:
+          - 'node-exporter:9100'

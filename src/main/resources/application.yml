@@ -1,0 +1,21 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: order-service
+
+# Cấu hình Spring Boot Actuator & Metrics cho Prometheus
+management:
+  endpoints:
+    web:
+      exposure:
+        # Chỉ mở tối thiểu health và prometheus theo khuyến nghị bảo mật Production
+        include: health, prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      # Gán nhãn chung application="order-service" cho tất cả metrics xuất ra
+      application: ${spring.application.name}
