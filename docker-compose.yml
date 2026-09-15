@@ -32,11 +32,31 @@ services:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
       - /:/rootfs:ro
+    ports:
+      - "9100:9100"
     command:
       - '--path.procfs=/host/proc'
       - '--path.sysfs=/host/sys'
     networks:
       - quickbite-net
+
+  # Grafana Dashboard
+  grafana:
+    image: grafana/grafana:10.0.3
+    container_name: quickbite-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - grafana-data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    networks:
+      - quickbite-net
+    depends_on:
+      - prometheus
 
 networks:
   quickbite-net:
@@ -44,3 +64,4 @@ networks:
 
 volumes:
   prometheus-data:
+  grafana-data:

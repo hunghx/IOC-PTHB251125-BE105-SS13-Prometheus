@@ -10,7 +10,7 @@ Dự án mẫu minh họa đầy đủ cấu hình **Prometheus Monitoring** cho
 - **Build Tool**: Gradle 8.x
 - **Framework**: Spring Boot 3.2.3 (Web, Actuator, Micrometer Prometheus)
 - **Containerization**: Docker Compose
-- **Monitoring**: Prometheus v2.45.0, Node Exporter v1.6.0
+- **Monitoring**: Prometheus v2.45.0, Node Exporter v1.6.0, Grafana v10.0.3
 
 ```
 quickbite-monitoring-demo/
@@ -20,6 +20,10 @@ quickbite-monitoring-demo/
 ├── docker-compose.yml
 ├── prometheus/
 │   └── prometheus.yml
+├── grafana/
+│   └── provisioning/
+│       └── datasources/
+│           └── datasource.yml
 └── src/
     └── main/
         ├── java/com/quickbite/order/
@@ -77,6 +81,12 @@ quickbite_active_orders{application="order-service",} 4.0
   ```bash
   docker exec -it quickbite-prometheus wget -qO- http://localhost:9090/api/v1/targets
   ```
+
+### Bước 6: Truy cập Grafana Dashboard
+- Truy cập Grafana Web UI: `http://localhost:3000`
+- Tài khoản mặc định: `admin` / `admin` (Bạn sẽ được yêu cầu đổi mật khẩu ở lần đăng nhập đầu tiên).
+- Grafana đã được cấu hình tự động kết nối với Prometheus làm Datasource.
+- **Dashboard mặc định**: Đã bao gồm "QuickBite Basic Monitoring" cung cấp các chỉ số CPU, RAM, Disk và Request Rate. Bạn có thể tìm thấy dashboard này trong menu `Dashboards` -> `Browse`.
 
 ---
 

@@ -11,7 +11,7 @@ management:
     web:
       exposure:
         # Chỉ mở tối thiểu health và prometheus theo khuyến nghị bảo mật Production
-        include: health, prometheus
+        include: health, prometheus, info, metrics
   endpoint:
     health:
       show-details: always
